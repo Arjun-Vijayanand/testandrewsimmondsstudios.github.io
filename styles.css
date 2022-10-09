@@ -1,0 +1,172 @@
+/*Below rules apply to all website view windows*/
+.headingElement{
+    background-color:rgb(209, 209, 209);
+}
+
+.gallery-image{
+    padding:10px;
+    height:500px;
+    object-fit:cover;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+#wrapper{
+    min-height: calc(100vh - 70px);
+}
+
+h1{
+    font-size:100px;
+    font-family:'Playfair Display', serif;
+    text-align:center;
+}
+
+.text-section{
+    padding:50px;
+    background-color:#fffdfe;
+}
+
+.text-section-one{
+    animation:fadeIn 6s;
+    -webkit-animation:fadeIn 6s;
+}
+
+.text-section-two{
+    animation:fadeIn 7s;
+    -webkit-animation:fadeIn 7s;
+}
+
+.text-section-three{
+    animation:fadeIn 8s;
+    -webkit-animation:fadeIn 8s;
+}
+
+td,tr{
+    padding:20px 0;
+}
+
+.date-data{
+    text-align:center;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+footer{
+    overflow:hidden;
+    font-family:'Open Sans',sans-serif;
+    font-size:0.9em;
+    padding:10px;
+    flex-shrink: 0;
+}
+
+footer img{
+    width:80px;
+    vertical-align:middle;
+}
+
+.selection-button{
+    text-align:center;
+    display:inline-block;
+    padding:15px 40px;
+    border:1px solid #fff;
+    cursor:pointer;
+    position:relative;
+    overflow:hidden;
+    margin:10px 20px;
+    width:240px;
+    text-decoration:none;
+    color:#fff;
+}
+
+.selection-button:hover{
+    background-color:rgb(73, 73, 73);
+    text-decoration:none;
+    color:#fff;
+}
+
+/*Below CSS apply to the larger-computer size displays*/
+@media screen and (min-width: 600px) {
+    
+    *{
+        box-sizing:border-box;
+        font-size:1.02em;
+        /*Makes the border and padding included in the objects width and the font size of all text a readable size*/
+    }
+
+    body{ 
+        opacity: 0;
+        transition: opacity 2s;
+        -webkit-transition: opacity 2s; /* Safari */
+        background-color:#fffdfe;
+        /*A nice off white that will contrast with the darker navbar*/
+    }
+
+    .normNavBar{
+        display:content;
+    }
+    
+    .offCanvasDisplay{
+        display:none;
+    }
+    
+    p{
+        font-family: 'Open Sans', sans-serif;
+        /*This is an easy to read font for the most users as open sans is easy to read, sans-serif will be used if there is an error for some reason*/
+    }
+    
+    li{
+        padding:10px;
+    }
+    
+    li a:hover{
+        text-decoration:underline;
+        /*Adds the underline effect to the text in the navigation bar*/
+    }
+    
+    ul,a{
+        font-family: 'Playfair Display', sans-serif;
+        /*Sets the font of the navigation bar to a readable size*/
+    }
+    
+    footer p{
+        padding:10px;
+    }
+
+}
+
+/*Below CSS rules apply to the mobile display*/
+@media screen and (max-width: 600px){
+    /*Specifc elements below apply for the dissapearing navigation bar on mobile displays.*/
+    .normNavBar{
+        display:none;
+    }
+    
+    .navbar-brand{
+        display:inline;
+    }
+    
+    .offCanvasDisplay{
+        display:content;
+    }
+
+    .offcanvas-sidebar-link{
+        font-family:'Playfair Display', serif;
+        padding:10px;
+    }
+
+    div ul li:hover{
+        background-color:aliceblue;
+    }
+
+}
